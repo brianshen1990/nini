@@ -1,0 +1,9 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+
+      "eslint.validate": ["javascript"],
+      "editor.detectIndentation": true,
+    "editor.tabSize": 2
+}
