@@ -3,7 +3,7 @@ const useStyles = () => {
   return {color: 'pink'}
 }
 
-export default function dummy({ showContent, content="default", color='red' }) {
+export default function dummy({ showContent, content="default", color='red', onClick }) {
 const headerStyle = useStyles();
   return (
     <div>
@@ -16,6 +16,8 @@ const headerStyle = useStyles();
         Here is your content:
           {content}
         </p> }
+
+        <button onClick={onClick}>Click me</button>
       
       </main>
     </div>
