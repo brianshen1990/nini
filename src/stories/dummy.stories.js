@@ -1,5 +1,5 @@
 import { boolean, text, select } from '@storybook/addon-knobs';
-import Dummy from '../components/dummy';
+import Dummy from '../components/Dummy';
 
 export const DummyOne = () => {
 
