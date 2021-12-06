@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 
 const useStyles = () => {
@@ -13,17 +13,26 @@ const useStyles = () => {
   }
 }
 
-export default function messageItem({ id, content="default", onDelete }) {
-const messageItemStyle = useStyles();
+export default function MessageItem({ id, content="default", onDelete }) {
+  const messageItemStyle = useStyles();
+
   return (
-    <li css={messageItemStyle}>
-      <span>{content}</span> 
-      <button onClick={ () => onDelete(id)} aria-label="delete">X</button>
-    </li>
+    <>
+      
+    
+        <li css={messageItemStyle}>
+          <span>{content}</span> 
+          <button onClick={ () => {
+            onDelete(id);
+          }} aria-label="delete">X</button>
+        </li>
+  
+    </>
+    
   )
 }
 
-messageItem.propTypes = {
+MessageItem.propTypes = {
   content: PropTypes.string,
   onDelete: PropTypes.func,
   id: PropTypes.string.isRequired,
