@@ -6,7 +6,7 @@ const useStyles = () => {
 }
 
 export default function Dummy({ showContent, content="default", color='red', onClick }) {
-const headerStyle = useStyles();
+  const headerStyle = useStyles();
   return (
     <div>
       <main>
