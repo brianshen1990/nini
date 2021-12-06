@@ -1,10 +1,9 @@
-import Head from 'next/head'
+import React from 'react';
+import Head from 'next/head';
 
-const useStyles = () => {
-  return {
-    color: "red"
-  }
-}
+const useStyles = () => ({
+  color: 'red'
+});
 
 export default function Home() {
   const redStyle = useStyles();
@@ -12,10 +11,8 @@ export default function Home() {
     <div>
       <Head> Nini </Head>
       <main>
-        <h1 css={redStyle}>
-          Welcome!
-        </h1>
+        <h1 css={redStyle}>Welcome!</h1>
       </main>
     </div>
-  )
+  );
 }

@@ -1,29 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const useStyles = () => {
-  return {color: 'pink'}
-}
+const useStyles = () => ({ color: 'pink' });
 
-export default function Dummy({ showContent, content="default", color='red', onClick }) {
+export default function Dummy({
+  showContent = false,
+  content = 'default',
+  color = 'red',
+  onClick
+}) {
   const headerStyle = useStyles();
   return (
     <div>
       <main>
-        <h1 css={headerStyle}>
-          Welcome!
-        </h1>
-        
-        {showContent && <p style={{color}}>
-        Here is your content:
-          {content}
-        </p> }
+        <h1 css={headerStyle}>Welcome!</h1>
 
-        <button onClick={onClick}>Click me</button>
-      
+        {showContent && (
+          <p style={{ color }}>
+            Here is your content:
+            {content}
+          </p>
+        )}
+
+        <button type="button" onClick={onClick}>
+          Click me
+        </button>
       </main>
     </div>
-  )
+  );
 }
 
 Dummy.propTypes = {
@@ -31,5 +35,4 @@ Dummy.propTypes = {
   content: PropTypes.string,
   color: PropTypes.string,
   onClick: PropTypes.func
-}
-  
+};
