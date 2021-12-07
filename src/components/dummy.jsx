@@ -14,16 +14,16 @@ export default function Dummy({
     <div>
       <main>
         <h1 css={headerStyle}>Welcome!</h1>
-
         {showContent && (
           <p style={{ color }}>
             Here is your content:
             {content}
           </p>
         )}
-
+        adasd this is just random
+        <br />
         <button type="button" onClick={onClick}>
-          Click me
+          Click me haha
         </button>
       </main>
     </div>

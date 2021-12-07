@@ -19,7 +19,9 @@ describe('Dummy', () => {
     );
 
     expect(await screen.findByText('Welcome!')).toBeInTheDocument();
-
+    screen.finyByRole('heading', {name: hedaText})
     expect(await axe(container)).toHaveNoViolations();
+    // test library
+    //  
   });
 });
